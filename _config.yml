@@ -1,11 +1,11 @@
 # Title of your blog; shows in the header
-name: "tobias"
+name: "Tobias Blog"
 
 # Description of your content (will only be used on Google Search)
 description: "Fluid, responsive blog theme for Jekyll"
 
 # Your name. Will show in your footer + sidebar
-author: "John Doge"
+author: "Tobias Nicolás"
 
 url: "https://nisoto.github.io/"
 baseurl: ""
