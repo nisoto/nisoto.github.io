@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Todo lo que necesitas saber de Git y Github"
+title:  "Todo lo que necesitas saber  
+de Git y Github"
 date:   2021-04-12 22:03:46
 ---
 
