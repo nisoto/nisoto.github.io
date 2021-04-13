@@ -1,14 +1,16 @@
 ---
 layout: post
-title:  "Going back on 2013; quite an incredible year"
-date:   2014-01-03 16:57:51
+title:  "Todo lo que necesitas saber de Git y Github"
+date:   2021-04-12 22:03:46
 ---
 
-A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+## ¿Qué es Git?
 
-I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+Git corresponde a un **sistema de control de versiones** desarrollado por Linus Torvalds.
 
-I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+No olvidemos que cuando hablamos de **control de versiones**, nos referimos a la gestión de los diversos cambios que se realizan sobre un proyecto (subir código a la nube, añadir alguna parte o simplemente editar algo que no funciona correctamente, entre otros).
+
+Por lo tanto, un sistema de control de versiones serían todas las herramientas que nos permiten hacer esas modificaciones antes mencionadas sobre nuestro trabajo, haciendo más fácil la administración de las distintas versiones.
 
 I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
 
