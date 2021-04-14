@@ -40,10 +40,10 @@ Y no cabe duda de que hay muchos otros ejemplos de equipos de trabajo que utiliz
 
 En Sistemas Operativos como Ubuntu o Mac OS Git ya viene instalado, por lo que solo debemos configurarlo. Para ello abrimos la terminal y tecleamos lo siguiente:
 
-```markdown
+{% highlight r %}
 $ git config --global user.name "YOUR NAME"
 $ git config --global user.email "YOUR@EMAIL.com"
-```
+{% endhighlight %}
 
 En **YOUR NAME** debemos colocar nuestro nombre y en **YOUR@EMAIL.COM** el correo que utilizamos o utilizaremos para nuestra cuenta de Github.
 
