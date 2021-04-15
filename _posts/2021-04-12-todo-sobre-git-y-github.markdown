@@ -61,9 +61,81 @@ Aquí es donde aparece una nueva palabra: **commit**. Un commit corresponde a la
 
 ### Primeros commits y viajes en el tiempo
 
-1. `git init`: Se utiliza para inicializar un repositorio local.
-2. `git add`: Nos permite subir un archivo desde el **directorio de trabajo** al **área de preparación** (index).
-3. `git commit -m "mensaje"`: Subirá al **directorio de Git** (head) los archivos que se encuentran en el área de preparación (index), agregando un comentario para poder indentificarlo.
-4. `git status`: Nos muestra el estado del **directorio de trabajo** y el **área de preparación** (qué cambios se han organizado, cuáles no y qué archivos están siendo rastreados por Git).
-5. `git log`: Nos muestra una lista con todos los commits realizados con su respectiva información (mensaje).
-6. `git checkout`: Con este comando podemos viajar a través de nuestros commits o ramas (más adelante veremos en detalle lo que son las ramas).
+#### `git init`
+
+Se utiliza para inicializar un repositorio local.
+
+{% highlight r %}
+$ git init
+{% endhighlight %}
+
+#### `git add`
+
+Nos permite subir un archivo desde el **directorio de trabajo** al **área de preparación** (index).
+
+{% highlight r %}
+$ git add index.html
+{% endhighlight %}
+
+Si queremos subir todos los archivos del directorio de trabajo, utilizamos `-A`:
+
+{% highlight r %}
+$ git add -A
+{% endhighlight %}
+
+Para devolver al directorio de trabajo un archivo que se encuentra en el área intermedia, utilizamos `rm --cached`:
+
+{% highlight r %}
+$ git rm --cached index.html
+{% endhighlight %}
+
+#### `git commit -m "mensaje"`
+
+Subirá al **directorio de Git** (head) los archivos que se encuentran en el área de preparación (index), agregando un comentario para poder indentificarlo.
+
+{% highlight r %}
+$ git commit -m "Primer commit"
+{% endhighlight %}
+
+#### `git status`
+
+Nos muestra el estado del **directorio de trabajo** y el **área de preparación** (qué cambios se han organizado, cuáles no y qué archivos están siendo rastreados por Git).
+
+{% highlight r %}
+$ git status
+{% endhighlight %}
+
+#### `git log`
+
+Nos muestra una lista con todos los commits realizados con su respectiva información (mensaje).
+
+{% highlight r %}
+$ git log
+commit 7fd525835c8c0359ea13fd982a04251d61832ab6 (HEAD -> master)
+Author: YOUR NAME <YOUR@EMAIL.COM>
+Date:   Sat Apr 25 21:22:20 2020 -0400
+
+    Segundo commit
+    
+commit 7827ceb120fbc23a8bc18e1e9c680ce1f731fed2
+Author: YOUR NAME <YOUR@EMAIL.COM>
+Date:   Mon Apr 20 18:58:58 2020 -0400
+
+    Primer commit
+{% endhighlight %}
+
+#### `git checkout`
+
+Con este comando podemos viajar a través de nuestros commits o ramas (más adelante veremos en detalle lo que son las ramas).
+
+{% highlight r %}
+$ git checkout 7fd525835c8c0359ea13fd982a04251d61832ab6
+{% endhighlight %}
+
+Si queremos regresar al último commit, utilizamos `master`:
+
+{% highlight r %}
+$ git checkout master
+{% endhighlight %}
+
+**Importante**: `master` siempre corresponderá al último commit que nosotros hayamos generado, mientras que el `head` podrá variar dependiendo de lo que le indiquemos por medio del comando `checkout`.
