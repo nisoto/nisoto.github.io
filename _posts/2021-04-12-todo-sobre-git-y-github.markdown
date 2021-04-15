@@ -58,3 +58,12 @@ Git está compuesto por tres estados o árboles en los que se pueden encontrar l
 <img src="{{ site.baseurl }}/assets/img/EstadosGit1.jpg">
 
 Aquí es donde aparece una nueva palabra: **commit**. Un commit corresponde a la acción de guardar o subir un archivo o conjunto de archivos al Directorio de Git (head).
+
+### Primeros commits y viajes en el tiempo
+
+1. `git init`: Se utiliza para inicializar un repositorio local.
+2. `git add`: Nos permite subir un archivo desde el **directorio de trabajo** al **área de preparación** (index).
+3. `git commit -m "mensaje"`: Subirá al **directorio de Git** (head) los archivos que se encuentran en el área de preparación (index), agregando un comentario para poder indentificarlo.
+4. `git status`: Nos muestra el estado del **directorio de trabajo** y el **área de preparación** (qué cambios se han organizado, cuáles no y qué archivos están siendo rastreados por Git).
+5. `git log`: Nos muestra una lista con todos los commits realizados con su respectiva información (mensaje).
+6. `git checkout`: Con este comando podemos viajar a través de nuestros commits o ramas (más adelante veremos en detalle lo que son las ramas).
