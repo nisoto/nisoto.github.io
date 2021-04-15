@@ -55,4 +55,6 @@ Git está compuesto por tres estados o árboles en los que se pueden encontrar l
 2. **Staging area**: Área de Preparación, también es conocida como **index** y actúa como una zona intermedia en donde escogeremos qué archivos están listos para pasar al siguiente estado y/o cuales no lo están por el momento.
 3. **Git directory**: Directorio de Git, también se le conoce como **head** y corresponde al repositorio donde se encuentra el registro de todo nuestro proyecto (commits).
 
+<img src="{{ site.baseurl }}/assets/img/EstadosGit1.jpg">
+
 Aquí es donde aparece una nueva palabra: **commit**. Un commit corresponde a la acción de guardar o subir un archivo o conjunto de archivos al Directorio de Git (head).
