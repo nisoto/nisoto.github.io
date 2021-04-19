@@ -4,7 +4,7 @@ title:  "Todo lo que necesitas saber sobre Git y Github"
 date:   2021-04-12 22:03:46
 ---
 
-### ¿Qué es Git?
+## ¿Qué es Git?
 
 Git corresponde a un **sistema de control de versiones** desarrollado por Linus Torvalds.
 
@@ -12,7 +12,7 @@ No olvidemos que cuando hablamos de **control de versiones**, nos referimos a la
 
 Por lo tanto, un sistema de control de versiones serían todas las herramientas que nos permiten hacer esas modificaciones antes mencionadas sobre nuestro trabajo, haciendo más fácil la administración de las distintas versiones.
 
-### Git en el mundo
+## Git en el mundo
 
 Git es usado por grandes empresas ya que esta herramienta permite que muchas de las aplicaciones que usamos hoy en día sean tal y como las conocemos. Algunas de estas empresas, que de seguro las conocerás, son las siguientes:
 
