@@ -210,9 +210,9 @@ $ git branch
 
 Si por alguna razón queremos borrar la rama que hemos creado (porque ya no nos sirve o simplemente porque los cambios en esta línea de tiempo contienen muchos errores), debemos posicionarnos primeramente en la rama principal y ejecutar lo siguiente:
 
-```r
+{% highlight r %}
 $ git branch -D testing
-```
+{% endhighlight %}
 
 #### Fusiones
 
@@ -223,9 +223,23 @@ Una fusión en Git consiste en la unión de dos ramas, proceso que consta de 2 p
 
 Si tomamos el ejemplo anterior, fusionaremos la rama master con testing, siguiendo los pasos respectivos:
 
-```r
+{% highlight r %}
 $ git checkout master
 $ git merge testing
-```
+{% endhighlight %}
 
 Al hacer un `git log` nos podremos dar cuenta que la rama master también cuenta con los commits de la rama que acabamos de absorver.
+
+### Github
+
+Github corresponde a un sitio que nos permite contar con las virtudes de Git como sistema de control de versiones pero en Internet, dándonos ciertas ventajas como compartir nuestro trabajo y/o trabajar con más personas.
+
+Tanto Github como otros sitios que cumplen la misma función (Gitlab o Bitbucket, por ejemplo) se han convertido hoy en día en redes sociales para los programadores ya que como se especificó anteriormente, nos permiten compartir nuestro trabajo (muchas empresas revisan nuestros perfiles de Github para tener conocimiento de nuestros trabajos realizados) y trabajar con más personas (por ejemplo, un equipo de desarrolladores de software).
+
+Es importante considerar que Github se suma al flujo de trabajo de Git como un cuarto estado o árbol:
+
+<img src="{{ site.baseurl }}/assets/img/EstadosGit2.jpg">
+
+#### Registro y configuración de la llave SSH
+
+Hola amigos.
