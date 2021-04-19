@@ -51,6 +51,8 @@ $ git config --global user.email "YOUR@EMAIL.com"
 
 En **YOUR NAME** debe ir nuestro nombre y en **YOUR@EMAIL.COM** el correo que utilizamos o utilizaremos para nuestra cuenta de Github.
 
+---
+
 ## Flujo de trabajo
 
 Git está compuesto por tres estados o árboles en los que se pueden encontrar los archivos de nuestro proyecto:
@@ -62,6 +64,8 @@ Git está compuesto por tres estados o árboles en los que se pueden encontrar l
 <img src="{{ site.baseurl }}/assets/img/EstadosGit1.jpg">
 
 Aquí es donde aparece una nueva palabra: **commit**. Un commit corresponde a la acción de guardar o subir un archivo o conjunto de archivos al Directorio de Git (head).
+
+---
 
 ## Primeros commits y viajes en el tiempo
 
@@ -144,6 +148,8 @@ $ git checkout master
 
 **Importante**: `master` siempre corresponderá al último commit que nosotros hayamos generado, mientras que el `head` podrá variar dependiendo de lo que le indiquemos por medio del comando `checkout`.
 
+---
+
 ## Reset
 
 El comando `reset` funciona de manera similar a `checkout`, con la diferencia de que este elimina los commits a su paso. Existen 3 niveles o tipos de borrado:
@@ -171,6 +177,8 @@ Como su nombre lo indica, borra absolutamente todo lo que hay después del commi
 {% highlight r %}
 $ git reset --hard 7827ceb120fbc23a8bc18e1e9c680ce1f731fed2
 {% endhighlight %}
+
+---
 
 ## Ramas y fusiones
 
@@ -234,6 +242,8 @@ $ git merge testing
 
 Al hacer un `git log` nos podremos dar cuenta que la rama master también cuenta con los commits de la rama que acabamos de absorver.
 
+---
+
 ## Github
 
 Github corresponde a un sitio que nos permite contar con las virtudes de Git como sistema de control de versiones pero en Internet, dándonos ciertas ventajas como compartir nuestro trabajo y/o trabajar con más personas.
@@ -246,4 +256,28 @@ Es importante considerar que Github se suma al flujo de trabajo de Git como un c
 
 ### Registro y configuración de la llave SSH
 
-Hola amigos.
+Crear una cuenta en Github es bastante sencillo, solo debemos ir a la [página](https://github.com/) y hacer clic en **Sign up**, donde se nos pedirá un usuario, correo y contraseña.
+
+Una vez creada nuestra cuenta, el siguiente paso es enlazarla con Git y para ello será necesario crear una llave SSH. Nos dirigimos a la terminal y ejecutamos lo siguiente:
+
+{% highlight r %}
+$ ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
+{% endhighlight %}
+
+Este comando generará dicha llave, la cual debemos copiar dentro de nuestra cuenta de Github. Para visualizarla ejecutamos:
+
+{% highlight r %}
+$ cat ~/.ssh/id_rsa.pub
+{% endhighlight %}
+
+Comando que nos mostrará a través de la terminal la llave, que debemos copiar en la ruta **Settings > SSH and GPG keys > New SSH key**. Para verificar la correcta vinculación, basta con ejecutar en la terminal:
+
+{% highlight r %}
+$ ssh -T git@github.com
+{% endhighlight %}
+
+Y se debería desplegar un mensaje como el siguiente:
+
+{% highlight r %}
+Hi excid3! You've successfully authenticated, but GitHub does not provide shell access.
+{% endhighlight %}
