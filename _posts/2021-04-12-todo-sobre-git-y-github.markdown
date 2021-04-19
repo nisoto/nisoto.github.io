@@ -36,7 +36,7 @@ Incluso el software que nos ayuda a crear más software utiliza Git:
 
 Y no cabe duda de que hay muchos otros ejemplos de equipos de trabajo que utilizan Git no solo en el desarrollo de software, sino también de contenido y productos profesionales.
 
-### Instalación y configuración de Git
+## Instalación y configuración de Git
 
 En Sistemas Operativos como Ubuntu o Mac OS Git ya viene instalado, por lo que solo debemos configurarlo. Para ello abrimos la terminal y tecleamos lo siguiente:
 
@@ -47,7 +47,7 @@ $ git config --global user.email "YOUR@EMAIL.com"
 
 En **YOUR NAME** debe ir nuestro nombre y en **YOUR@EMAIL.COM** el correo que utilizamos o utilizaremos para nuestra cuenta de Github.
 
-### Flujo de trabajo
+## Flujo de trabajo
 
 Git está compuesto por tres estados o árboles en los que se pueden encontrar los archivos de nuestro proyecto:
 
@@ -59,9 +59,9 @@ Git está compuesto por tres estados o árboles en los que se pueden encontrar l
 
 Aquí es donde aparece una nueva palabra: **commit**. Un commit corresponde a la acción de guardar o subir un archivo o conjunto de archivos al Directorio de Git (head).
 
-### Primeros commits y viajes en el tiempo
+## Primeros commits y viajes en el tiempo
 
-#### `git init`
+### `git init`
 
 Se utiliza para inicializar un repositorio local.
 
@@ -69,7 +69,7 @@ Se utiliza para inicializar un repositorio local.
 $ git init
 {% endhighlight %}
 
-#### `git add`
+### `git add`
 
 Nos permite subir un archivo desde el **directorio de trabajo** al **área de preparación** (index).
 
@@ -89,7 +89,7 @@ Para devolver al directorio de trabajo un archivo que se encuentra en el área i
 $ git rm --cached index.html
 {% endhighlight %}
 
-#### `git commit -m "mensaje"`
+### `git commit -m "mensaje"`
 
 Subirá al **directorio de Git** (head) los archivos que se encuentran en el área de preparación (index), agregando un comentario para poder indentificarlo.
 
@@ -97,7 +97,7 @@ Subirá al **directorio de Git** (head) los archivos que se encuentran en el ár
 $ git commit -m "Primer commit"
 {% endhighlight %}
 
-#### `git status`
+### `git status`
 
 Nos muestra el estado del **directorio de trabajo** y el **área de preparación** (qué cambios se han organizado, cuáles no y qué archivos están siendo rastreados por Git).
 
@@ -105,7 +105,7 @@ Nos muestra el estado del **directorio de trabajo** y el **área de preparación
 $ git status
 {% endhighlight %}
 
-#### `git log`
+### `git log`
 
 Nos muestra una lista con todos los commits realizados con su respectiva información (mensaje).
 
@@ -124,7 +124,7 @@ Date:   Mon Apr 20 18:58:58 2020 -0400
     Primer commit
 {% endhighlight %}
 
-#### `git checkout`
+### `git checkout`
 
 Con este comando podemos viajar a través de nuestros commits o ramas (más adelante veremos en detalle lo que son las ramas).
 
@@ -140,11 +140,11 @@ $ git checkout master
 
 **Importante**: `master` siempre corresponderá al último commit que nosotros hayamos generado, mientras que el `head` podrá variar dependiendo de lo que le indiquemos por medio del comando `checkout`.
 
-### Reset
+## Reset
 
 El comando `reset` funciona de manera similar a `checkout`, con la diferencia de que este elimina los commits a su paso. Existen 3 niveles o tipos de borrado:
 
-#### `reset --soft`
+### `reset --soft`
 
 Este tipo de reset nos permite viajar a un commit en específico, borrando los posteriores a este. Sin embargo, mantiene nuestro directorio de trabajo intacto.
 
@@ -152,7 +152,7 @@ Este tipo de reset nos permite viajar a un commit en específico, borrando los p
 $ git reset --soft 7827ceb120fbc23a8bc18e1e9c680ce1f731fed2
 {% endhighlight %}
 
-#### `reset --mixed`
+### `reset --mixed`
 
 Funciona de manera similar al anterior (soft), borrando también los archivos que se encuentren en el área de preparación (index). Tampoco se involucra con nuestro directorio de trabajo.
 
@@ -160,7 +160,7 @@ Funciona de manera similar al anterior (soft), borrando también los archivos qu
 $ git reset --mixed 7827ceb120fbc23a8bc18e1e9c680ce1f731fed2
 {% endhighlight %}
 
-#### `reset --hard`
+### `reset --hard`
 
 Como su nombre lo indica, borra absolutamente todo lo que hay después del commit al que queremos viajar, afectando incluso nuestro directorio de trabajo.
 
@@ -168,7 +168,7 @@ Como su nombre lo indica, borra absolutamente todo lo que hay después del commi
 $ git reset --hard 7827ceb120fbc23a8bc18e1e9c680ce1f731fed2
 {% endhighlight %}
 
-### Ramas y fusiones
+## Ramas y fusiones
 
 Una rama en Git vendría siendo una especie de línea de tiempo de un proyecto, la cual se construye mediante nuestros commits.
 
@@ -176,7 +176,7 @@ Cuando nosotros inicializamos nuestro repositorio local con el comando `git init
 
 Las ramas son utilizadas por lo general para desarrollar funcionalidades aisladas unas de otras (como el testing, por ejemplo).
 
-#### Ramas
+### Ramas
 
 Crear una nueva rama en Git es bastante sencillo:
 
@@ -214,7 +214,7 @@ Si por alguna razón queremos borrar la rama que hemos creado (porque ya no nos 
 $ git branch -D testing
 {% endhighlight %}
 
-#### Fusiones
+### Fusiones
 
 Una fusión en Git consiste en la unión de dos ramas, proceso que consta de 2 pasos muy importantes:
 
@@ -230,7 +230,7 @@ $ git merge testing
 
 Al hacer un `git log` nos podremos dar cuenta que la rama master también cuenta con los commits de la rama que acabamos de absorver.
 
-### Github
+## Github
 
 Github corresponde a un sitio que nos permite contar con las virtudes de Git como sistema de control de versiones pero en Internet, dándonos ciertas ventajas como compartir nuestro trabajo y/o trabajar con más personas.
 
@@ -240,6 +240,6 @@ Es importante considerar que Github se suma al flujo de trabajo de Git como un c
 
 <img src="{{ site.baseurl }}/assets/img/EstadosGit2.jpg">
 
-#### Registro y configuración de la llave SSH
+### Registro y configuración de la llave SSH
 
 Hola amigos.
